@@ -1,0 +1,14 @@
+@charset "utf-8"
+
+body {
+  background-color: #f7f7f7;
+}
+
+/* Footer */
+footer {
+  border-top: solid 1px #eee;
+  color: #ccc;
+  font-weight: 300;
+  padding: 40px 0;
+  height: 30px;
+}
