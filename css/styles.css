@@ -19,15 +19,12 @@ footer {
   color: #ccc;
   font-weight: 300;
   padding: 40px 0;
-  /*height: 10px;*/
 }
-
+/*
 footer .links {
-  float: right;
   line-height: 30px;
-  margin-left: 20px;
 }
-
+*/
 footer .links a {
   text-decoration: none;
 }
