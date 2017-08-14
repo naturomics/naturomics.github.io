@@ -19,3 +19,9 @@ footer {
   padding: 40px 0;
   height: 30px;
 }
+
+footer .links {
+  float: right;
+  line-height: 30px;
+  margin-left: 20px;
+}
