@@ -24,7 +24,14 @@ footer {
 
 footer .links {
   float: right;
-  text-decoration: none;
   line-height: 30px;
   margin-left: 20px;
+}
+
+footer .links a {
+  text-decoration: none;
+}
+
+footer .links a:hover {
+  text-decoration: underline;
 }
