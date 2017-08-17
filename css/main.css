@@ -11,20 +11,26 @@ body {
   width: 100%;
 }
 
-/* Footer */
+/* Footer Start */
 footer {
   border-top: solid 1px #eee;
   position: absolute;
   bottom: 0px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
   color: #ccc;
   font-weight: 300;
   padding: 40px 0;
 }
-/*
-footer .links {
-  line-height: 30px;
-}
-*/
-footer .links a {
+
+footer a {
+  line-height: 20px;
   text-decoration: none;
 }
+
+footer svg {
+  width: 20%;
+}
+
+/* Footer End*/
