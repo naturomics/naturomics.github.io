@@ -11,6 +11,9 @@ body {
   width: 100%;
 }
 
+.navbar {
+  background-color: #43a047;
+}
 /* Footer Start */
 footer {
   border-top: solid 1px #eee;
