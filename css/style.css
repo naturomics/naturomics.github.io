@@ -1,0 +1,16 @@
+$main-color: #f7f7f7;
+$link-color: ##43a047;
+
+html {
+  position: relative;
+  min-height: 100;
+}
+
+body {
+  padding-top: 50px;
+  background-color: $main-color;
+}
+
+a {
+  color: $link-color;
+}

@@ -1,9 +1,7 @@
 @charset "utf-8"
-
-html {
-  height: 100%;
-  width: 100%;
-}
+@import "style.css"
+@import "navbar.css"
+@import "footer.css"
 
 body {
   background-color: #f7f7f7;
