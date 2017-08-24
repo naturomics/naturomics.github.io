@@ -1,5 +1,9 @@
-$main-color: #f7f7f7;
-$link-color: ##43a047;
+:root {
+  --main-color: #f7f7f7;
+  --link-color: ##43a047;
+  --link-hover-color: darken($link-color, 10%);
+  --border-color: #eee;
+}
 
 html {
   position: relative;
@@ -8,9 +12,13 @@ html {
 
 body {
   padding-top: 50px;
-  background-color: $main-color;
+  background-color: var(--main-color);
 }
 
 a {
-  color: $link-color;
+  color: var(--link-color);
+  &: hover,
+  &: focus {
+    color: var(--link-hover-color);
+  }
 }

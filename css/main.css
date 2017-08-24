@@ -3,20 +3,9 @@
 @import "navbar.css"
 @import "footer.css"
 
-body {
-  background-color: #f7f7f7;
-  height: 100%;
-  width: 100%;
-}
-
-.navbar {
-  background-color: #43a047;
-}
 /* Footer Start */
-footer {
-  border-top: solid 1px #eee;
+/*footer {
   position: absolute;
-  bottom: 0px;
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -24,6 +13,7 @@ footer {
   font-weight: 300;
   padding: 40px 0;
 }
+*/
 
 footer a {
   /* line-height: 20px;*/
