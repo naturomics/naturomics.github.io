@@ -1,5 +1,15 @@
 :root {--navbar-bg-color: #43a047;}
 
-.navbar {
+nav {
   background-color: var(--navbar-bg-color);
+}
+nav li {
+  float: right;
+  margin: 5px 0;
+  width: 10%;
+  height: 50px;
+  text-align: center;
+  background-color: var(--navbar-bg-color);
+}
+.navbar {
 }
