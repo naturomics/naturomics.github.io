@@ -4,12 +4,12 @@ nav {
   background-color: var(--navbar-bg-color);
 }
 nav li {
-  float: right;
-  margin: 5px 0;
+  margin: 5px 15px;
   width: 10%;
   height: 50px;
-  text-align: center;
+  text-align: right;
   background-color: var(--navbar-bg-color);
+	display: inline;
 }
 .navbar {
 }

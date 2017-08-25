@@ -8,5 +8,9 @@ footer {
   padding: 40px 0;
 }
 footer li {
-  float: left;
+	display: inline;
+	margin: 0px 10px;
+}
+a {
+	display: inline;
 }
