@@ -1,13 +1,14 @@
 :root {--navbar-bg-color: #43a047;}
 
 nav {
-  background-color: var(--navbar-bg-color);
+  background-color: #00ffff; /*var(--navbar-bg-color);*/
 }
 nav li {
-  margin: 5px 15px;
+  margin: 15px 15px;
   width: 10%;
-  height: 50px;
-  text-align: right;
+  height: 30px;
+  text-align: left;
+	float: right;
   background-color: var(--navbar-bg-color);
 	display: inline;
 }
