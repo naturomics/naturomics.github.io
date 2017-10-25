@@ -2,6 +2,8 @@
 
 nav {
   background-color: #00ffff; /*var(--navbar-bg-color);*/
+  display: block;
+  position: fixed;
 }
 nav li {
   margin: 15px 15px;
