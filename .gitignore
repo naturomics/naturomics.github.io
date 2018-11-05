@@ -1,4 +1,6 @@
 local
 node_modules
+_site
 yarn-debug.log*
 yarn-error.log*
+.sass-cache
