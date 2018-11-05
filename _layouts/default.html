@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="{{site.local|default: "en"}}">
+  {% include head.html %}
+  <!-- Body Start -->
+  {{content}}
+  <!-- Body End -->
+
+  {% if jekyll.environment == 'production' and site.google_analytics %}
+    {% include analytics.html %}
+  {% endif %}
+</html>

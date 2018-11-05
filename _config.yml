@@ -1,0 +1,47 @@
+# Info
+title: "Naturomics"
+description: "Explore the Beauty of Science Hidden in Nature with An Omics Mind"
+url: "https://naturomics.com"
+
+social:
+  github: "https://github.com/naturomics"
+  linkedin: "https://www.linkedin.com/in/naturomics"
+  wechat: 
+  email: naturomics.liao@gmail.com
+  facebook: 
+  twitter: 
+
+google_analytics: UA-127752877-1
+
+# Settings
+permalink: /:categories/:title
+
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+
+searchconfig:
+  apikey:
+  indexname:
+
+exclude:
+  - README.md
+  - ".gitignore"
+  - CNAME
+  - local
+  - Gemfile
+  - Gemfile.lock
+
+plugins:
+  - jekyll-redirect-from
+
+sass:
+  style: :compressed
+
+cdn:
+  jquery: "https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  jquery_hash: "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  popper: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+  popper_hash: "sha384-GM0Y80ecpwKxF1D5XCrGanKusGDy9WW0O2sSM84neB4iFhvKp3fwnoIRnPsQcN1R"
+  bootstrap: "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  bootstrap_hash: "sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"

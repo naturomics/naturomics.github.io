@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<body>
+  {% include navbar.html %}
+  <div class="mainWrapper">
+    <div class="container mainContent">
+    {% include sidebar.html %}
+    {{ content }}
+    </div>
+    {% include footer.html %}
+  </div>
+  {% include scripts.html %}
+</body>

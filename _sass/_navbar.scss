@@ -1,0 +1,17 @@
+.navWrapper {
+  position: fixed;
+  width: 100%;
+  background-color: $main-nav-color;
+}
+
+.main-navigation {
+  position: relative;
+  bottom: $sub-nav-ptop;
+}
+
+.sub-navigation {
+  position: relative;
+  top: $main-nav-ptop;
+  width: 100%;
+  background-color: $sub-nav-color;
+}

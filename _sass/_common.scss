@@ -1,0 +1,36 @@
+// bg color of website
+$primary-bg: #f0f8fb;
+
+// padding top for navigation
+$main-nav-ptop: 57px;
+$sub-nav-ptop: 50px;
+
+$main-nav-color: #f0f8fb;
+$sub-nav-color: #fff1fe;
+
+$sidebar-width: 100px;
+$footer-height: 40px;
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  //min-height: calc(100vh - $main-nav-ptop);
+  min-height: 100vh;
+  padding-top: $main-nav-ptop + $sub-nav-ptop;
+}
+
+.mainContent {
+  flex: auto;
+}
+
+footer {
+  flex-grow: 0;
+  width: 100%;
+  text-align: center;
+}
