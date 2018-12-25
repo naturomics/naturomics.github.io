@@ -4,3 +4,4 @@ _site
 yarn-debug.log*
 yarn-error.log*
 .sass-cache
+Gemfile.lock
