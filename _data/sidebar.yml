@@ -1,0 +1,45 @@
+capslayer_api:
+  sidebar_title: CapsLayer
+  version: r0.1
+  baseurl: /capslayer/api_docs
+  folders:
+      - title: cl.layers
+        items:
+          - title: Overview
+            url: /cl/layers
+          - title: dense
+            url: /cl/layers/dense
+          - title: conv2d
+            url: /cl/layers/conv2d
+          - title: primaryCaps
+            url: /cl/layers/primarycaps
+      - title: cl.losses
+        items:
+          - title: Overview
+            url: /cl/losses
+          - title: margin_loss
+            url: /cl/losses/margin_loss
+          - title: spread_loss
+            url: /cl/losses/spread_loss
+      - title: cl.plotlib
+        items:
+          - title: Overview
+            url: /cl/plotlib
+      - title: cl.data
+        items:
+          - title: Overview
+            url: /cl/data
+          - title: datasets
+            items:
+              - title: Overview
+                url: /cl/data/datasets
+              - title: cifar10
+                url: /cl/data/datasets/cifar10
+              - title: mnist
+                url: /cl/data/datasets/mnist
+
+capslayer_tutor:
+    sidebar_title: Tutorials
+    baseurl: /capslayer/tutorials
+    folders:
+      - title: Get started

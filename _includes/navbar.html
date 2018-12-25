@@ -1,0 +1,75 @@
+<div class="navWrapper">
+
+<!-- start sub-navigation -->
+{% if page.subnav %}
+{% assign subnav=site.data.navbar.subnav[page.subnav] %}
+  <nav class="navbar sub-navigation">
+  <div class="container">
+  {% for item in subnav %}
+  <h4>
+    <a href="{{item.url}}">{{item.title}}</a>
+  </h4>
+  {% endfor %}
+  </div>
+  </nav>
+{% endif %}
+<!-- end sub-navigation -->
+
+<nav class="navbar navbar-expand-md {% if page.subnav %}main-navigation{% endif %}">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navigation Brand -->
+    {% assign brand = site.data.navbar.brand %}
+    <a class="navbar-brand" href="{{brand[0].url}}">
+    {% for item in brand %}
+      {% if item.text %}
+        {{item.text}}
+      {% elsif item.img %}
+      <img class="d-inline-block" src="{{site.url}}{{item.img}}" width="{{item.width}}" height="{{item.height}}" alt="">
+      {% endif %}
+    {% endfor %}
+    </a>
+
+    <!-- Navigation Items-->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav">
+    {% for item in site.data.navbar.nav %}
+      <!-- No dorpdown -->
+      {% if item.url and item.title %}
+        <li class="nav-item">
+	  <a class="nav-link" href="{{item.url}}">{{item.title}}</a>
+        </li>
+
+      <!-- with dorpdown -->
+      {% elsif item.folders and item.title %}
+        <li class="dropdown nav-item">
+	  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{item.title}}</a>
+	  <ul class="dropdown-menu">
+            {% for subitem in item.folders %}
+              {% if subitem.header %}
+	        <h6 class="dorpdown-header">{{subitem.header}}</h6>
+	      {% elsif subitem.url and subitem.title %}
+	        <li>
+                  <a class="dropdowm-item" href="{{subitem.url}}">{{subitem.title}}</a>
+	        </li>
+	      {% endif %}
+	    {% endfor %}
+	  </ul>
+	</li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+    <!-- end Navigation Items-->
+    </div>
+    <!-- start search -->
+    {% include searchbox.html %}
+    <!-- end search -->
+
+  </div>
+  <!-- end container -->
+</nav>
+</div>
+<!-- end navWrapper -->

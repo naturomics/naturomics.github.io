@@ -1,0 +1,38 @@
+# brand
+brand:
+- url: /
+- img: /assets/imgs/logo.svg
+  height: 28
+  width: 34
+- text: # NATUROMICS
+
+nav:
+# items with dropdowns
+- title: 
+  folders: 
+    - header: 
+    - title: 
+      url: 
+    - title: 
+      url: 
+# items without dropdowns
+- title: CapsLayer Project
+  url: /capslayer
+- title: Blog
+  url: /blog
+- title: About
+  url: /about
+
+subnav:
+  capslayer:
+  - title: Install
+    url: /capslayer/install
+  - title: Tutorials
+    url: /capslayer/tutorials
+  - title: API
+    url: /capslayer/api_docs
+  - title: Related Posts
+    url: /blog/capslayer
+  blogHome:
+  - title: Archives
+    url: /blog/archives

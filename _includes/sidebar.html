@@ -1,0 +1,64 @@
+{% assign sidebar = site.data.sidebar[page.sidebar] %}
+
+{% if sidebar %}
+<h5 class="sidebarTitle">{{sidebar.sidebar_title}}{%if sidebar.version%} {{sidebar.version}}{%endif%}</h5>
+<ul class="sidebarContent"> <!-- start main level -->
+  {% for item in sidebar.folders %}
+    {% if item.title and item.url %}
+      <li><a href="{{site.baseurl}}{{sidebar.baseurl}}{{item.url}}">{{item.title}}</a></li>
+    {% elsif item.title and item.external_url %}
+      <li><a href="{{item.external_url}}", target="_blank">{{item.title}}</a></li>
+
+    <!-- start sub-level -->
+    {% elsif item.title and item.items %}
+        {% assign cond = item.title | replace: ".", "/" %}
+        {%if page.url contains cond %}
+	  {% assign collapse = "" %}
+        {%else%}
+	  {% assign collapse = "collapse" %}
+        {%endif%}
+	{% assign ID = item.title| replace: ".", "_"| replace: "/", "_" %}
+	<li>
+	  <a href="#{{ID}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+	    {{item.title}}
+	  </a>
+	</li>
+	<ul id="{{ID}}", class="{{collapse}}">
+        {% for item in item.items %}
+          {% if item.title and item.url %}
+	    <li><a href="{{site.baseurl}}{{sidebar.baseurl}}{{item.url}}">{{item.title}}</a></li>
+          {% elsif item.title and item.external_url %}
+            <li><a href="{{item.external_url}}", target="_blank">{{item.title}}</a></li>
+
+          <!-- start subsub-level -->
+          {% elsif item.title and item.items %}
+	    {% assign cond = item.title| replace: '.', "/" %}
+            {%if page.url contains cond %}
+	      {% assign collapse = "" %}
+            {%else%}
+	      {% assign collapse = "collapse" %}
+            {%endif%}
+	    {% assign ID = item.title| replace: ".", "_"| replace: "/", "_" %}
+	    <li>
+	      <a href="#{{ID}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+	        {{item.title}}
+	      </a>
+	    </li>
+	    <ul id="{{ID}}", class="{{collapse}}">
+            {% for item in item.items %}
+              {% if item.title and item.url %}
+              <li><a href="{{site.baseurl}}{{sidebar.baseurl}}{{item.url}}">{{item.title}}</a></li>
+              {% elsif item.title and item.external_url %}
+              <li><a href="{{item.external_url}}", target="_blank">{{item.title}}</a></li>
+              {% endif %}
+            {% endfor %}
+            </ul>
+          <!-- end subsub-level -->
+          {% endif %}
+        {% endfor %}
+      </ul>
+    <!-- end sub-level -->
+    {% endif %}
+  {% endfor %}
+</ul> <!-- end main level -->
+{% endif %}

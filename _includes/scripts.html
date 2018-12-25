@@ -1,0 +1,16 @@
+<script src="{{site.cdn.jquery}}" integrity="{{site.cdn.jquery_hash}}" crossorigin="anonymous"></script>
+<script src="{{site.cdn.popper}}" integrity="{{site.cdn.popper_hash}}" crossorigin="anonymous"></script>
+<script src="{{site.cdn.bootstrap}}" integrity="{{site.cdn.bootstrap_hash}}" crossorigin="anonymous"></script>
+{% if page.mathjax %}
+<script type="text/x-mathjax-config">MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      inlineMath: [['$','$']],
+      processEscapes: true
+    },
+    "HTML-CSS": {fonts: ["TeX"]}
+});</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+{% endif %}
