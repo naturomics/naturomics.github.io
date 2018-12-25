@@ -1,15 +1,20 @@
 // bg color of website
-$primary-bg: #f0f8fb;
+$primary-bgcolor: #f0f8fb;
 
 // padding top for navigation
 $main-nav-ptop: 57px;
 $sub-nav-ptop: 50px;
 
-$main-nav-color: #f0f8fb;
-$sub-nav-color: #fff1fe;
+$sub-nav-bgcolor: #673ab7;
+$main-nav-bgcolor: #3f51b5;
+$main-nav-color: #ffffff;
+$sub-nav-color: #ffffff;
 
-$sidebar-width: 100px;
+$sidebar-width: 220px;
+
 $footer-height: 40px;
+$footer-bgcolor: #f0f8fb;
+$footer-color: #000fff;
 
 body {
   min-height: 100%;
@@ -22,11 +27,23 @@ body {
   flex-direction: column;
   //min-height: calc(100vh - $main-nav-ptop);
   min-height: 100vh;
-  padding-top: $main-nav-ptop + $sub-nav-ptop;
+  padding-top: $main-nav-ptop + $sub-nav-ptop + 40px;
 }
 
 .mainContent {
   flex: auto;
+  display: flex;
+  align-items: stretch;
+  .sidebar {
+    flex-shrink: 0;
+    overflow-y: auto;
+    width: $sidebar-width;
+    min-height: 100%;
+  }
+  .content {
+    flex: auto;
+    overflow-y: auto;
+  }
 }
 
 footer {

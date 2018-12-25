@@ -1,0 +1,44 @@
+.sidebar {
+  background-color: #f7f7f7;
+  margin-right: 30px;
+  .sidebarTitle {
+    border-bottom-style: solid;
+    border-bottom-color: #808080;
+    text-align: center;
+    height: 40px;
+    padding-top: 5px;
+  }
+  ul {
+    list-style: none;
+    padding: 0 1em;
+    margin: 0.75em 0.3em;
+  }
+  .sidebarContent {
+    li.arrowright:before {
+      content: "";
+      border-style: solid;
+      border-color: transparent #111;
+      border-width: 0.30em 0 0.30em 0.30em;
+      display: block;
+      position: relative;
+      top: 0.95em;
+      left: -1em;
+      width: 0;
+      height: 0;
+    }
+    .arrowdown:before {
+      content: "";
+      border-style: solid;
+      border-left: 0.30em solid transparent;
+      border-right: 0.30em solid transparent;
+      border-top: 0.30em solid #000;
+      border-bottom: 0.30em solid transparent;
+      display: inline-block;
+      position: relative;
+      top: 0.15em;
+      left: -0.2em;
+      width: 0;
+      height: 0;
+    }
+  }
+}

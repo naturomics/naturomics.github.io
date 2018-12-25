@@ -24,6 +24,33 @@ searchconfig:
   apikey:
   indexname:
 
+collections_dir: collections
+collections:
+  capslayer:
+    output: true
+    permalink: /capslayer/:path
+
+defaults:
+  -
+    scope:
+      path: "_capslayer"
+      type: "capslayer"
+    values:
+      subnav: capslayer
+
+  -
+    scope:
+      path: "_capslayer/api_docs"
+      type: "capslayer"
+    values:
+      sidebar: capslayer_api
+  -
+    scope:
+      path: "_capslayer/tutorials"
+      type: "capslayer"
+    values:
+      sidebar: capslayer_tutor
+
 exclude:
   - README.md
   - ".gitignore"

@@ -1,9 +1,11 @@
 $landing-logo-bgcolor: #0099cc;
 
 body.landingPage {
-  background-color: $primary-bg !important;
+  background-color: $primary-bgcolor !important;
   .mainWrapper {
+    display: flex;
     padding-top: $main-nav-ptop;
+    min-height: 100vh;
   }
 }
 
@@ -22,6 +24,8 @@ body.landingPage {
   width: 100%;
   background: $landing-logo-bgcolor;
   padding: 30px 0;
+  height: 50vh;
+  color: #ffffff;
 }
 .landing-content {
   display: flex;
