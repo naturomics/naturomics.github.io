@@ -6,8 +6,14 @@ layout: default
   {% include navbar.html %}
   <div class="mainWrapper">
     <div class="container mainContent">
-    {% include sidebar.html %}
-    {{ content }}
+      {% if page.sidebar %}
+      <nav class="sidebar">
+      {% include sidebar.html %}
+      </nav>
+      {% endif %}
+      <div class="content">
+      {{ content }}
+      </div>
     </div>
     {% include footer.html %}
   </div>
